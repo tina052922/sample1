@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Main Page</title>
+ <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+ --navy: #01143D;
+ --bg: #E8ECEF;
+ --card: #FFFFFF;
+ --text-dark: #1E2A39;
+ --text-muted: #A9AEB4;
+ --progress: #4AB3FF;
+ --progress-bg: #D7DDE4;
+ --dark: #1B2B42;
+ --cyan: #43B3EF;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: 'Inter', sans-serif;
+background: var(--navy);
+color: var(--text-dark);
+min-height: 100vh;
+}
+
+nav {
+background-color: var(--dark);
+padding: 15px 0;
+position: sticky;
+top: 0;
+z-index: 1000;
+border-bottom: 2px solid var(--cyan);
+}
+
+nav ul {
+list-style: none;
+display: flex;
+justify-content: center;
+gap: 10px;
+margin: 0;
+padding: 0 20px;
+flex-wrap: wrap;
+}
+
+nav ul li a {
+color: var(--card);
+text-decoration: none;
+font-weight: 600;
+font-size: 16px;
+padding: 12px 24px;
+border-radius: 30px;
+transition: all 0.3s ease;
+display: inline-block;
+}
+
+nav ul li a:hover {
+background-color: rgba(67, 179, 239, 0.2);
+color: var(--cyan);
+}
+
+nav ul li a.active {
+background-color: var(--cyan);
+color: var(--navy);
+font-weight: 700;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 100px 20px;
+text-align: center;
+}
+
+h1 {
+color: var(--card);
+font-size: 3em;
+font-weight: 700;
+margin-bottom: 30px;
+}
+
+.content-box {
+font-size: 1.2em;
+line-height: 1.8;
+color: var(--text-dark);
+max-width: 800px;
+margin: 40px auto;
+background: var(--card);
+padding: 40px;
+border-radius: 20px;
+border: 2px solid var(--cyan);
+}
+
+.content-box p {
+color: var(--text-dark);
+margin: 0;
+}
+
+.btn-link {
+display: inline-block;
+margin-top: 30px;
+padding: 14px 30px;
+background: var(--cyan);
+color: var(--navy);
+text-decoration: none;
+border-radius: 10px;
+font-weight: 600;
+transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+background: var(--progress);
+transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+nav ul {
+flex-direction: column;
+gap: 8px;
+align-items: stretch;
+}
+
+nav ul li a {
+text-align: center;
+}
+
+h1 {
+font-size: 2em;
+}
+
+.content-box {
+font-size: 1em;
+padding: 25px;
+}
+}
+</style>
+</head>
+<body>
+ <nav>
+ <ul>
+ <li><a href="Main.html" class="active">Main</a></li>
+ <li><a href="Homepage.html">Home</a></li>
+ <li><a href="Aboutus.html">About</a></li>
+ <li><a href="Contactus.html">Contact</a></li>
+ </ul>
+ </nav>
+ <div class="container">
+ <h1>Welcome to Main Page</h1>
+ <div class="content-box">
+ <p>This is the main landing page for practicing Git branching and merging. Navigate to other pages to see the complete project.</p>
+ <a href="Homepage.html" class="btn-link">Go to Homepage</a>
+ </div>
+ </div>
+</body>
+</html>
+

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>My Sample About page</title>
+ <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+ --navy: #01143D;
+ --bg: #E8ECEF;
+ --card: #FFFFFF;
+ --text-dark: #1E2A39;
+ --text-muted: #A9AEB4;
+ --progress: #4AB3FF;
+ --progress-bg: #D7DDE4;
+ --dark: #1B2B42;
+ --cyan: #43B3EF;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: 'Inter', sans-serif;
+background: var(--navy);
+color: var(--text-dark);
+min-height: 100vh;
+}
+
+nav {
+background-color: var(--dark);
+padding: 15px 0;
+position: sticky;
+top: 0;
+z-index: 1000;
+border-bottom: 2px solid var(--cyan);
+}
+
+nav ul {
+list-style: none;
+display: flex;
+justify-content: center;
+gap: 10px;
+margin: 0;
+padding: 0 20px;
+flex-wrap: wrap;
+}
+
+nav ul li a {
+color: var(--card);
+text-decoration: none;
+font-weight: 600;
+font-size: 16px;
+padding: 12px 24px;
+border-radius: 30px;
+transition: all 0.3s ease;
+display: inline-block;
+}
+
+nav ul li a:hover {
+background-color: rgba(67, 179, 239, 0.2);
+color: var(--cyan);
+}
+
+nav ul li a.active {
+background-color: var(--cyan);
+color: var(--navy);
+font-weight: 700;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 100px 20px;
+text-align: center;
+}
+
+h1 {
+color: var(--card);
+font-size: 3em;
+font-weight: 700;
+margin-bottom: 30px;
+}
+
+.content-box {
+font-size: 1.2em;
+line-height: 1.8;
+color: var(--text-dark);
+max-width: 800px;
+margin: 0 auto 40px;
+background: var(--card);
+padding: 40px;
+border-radius: 20px;
+border: 2px solid var(--cyan);
+transition: all 0.3s ease;
+}
+
+.content-box:hover {
+border-color: var(--progress);
+}
+
+.content-box p {
+color: var(--text-dark);
+margin: 0;
+}
+
+.about-section {
+text-align: left;
+max-width: 900px;
+margin: 40px auto;
+background: var(--card);
+padding: 35px;
+border-radius: 15px;
+border: 2px solid var(--progress-bg);
+transition: all 0.3s ease;
+}
+
+.about-section:hover {
+border-color: var(--cyan);
+}
+
+.about-section h2 {
+color: var(--cyan);
+font-size: 2em;
+margin-bottom: 20px;
+text-align: center;
+font-weight: 700;
+}
+
+.about-section p {
+color: var(--text-dark);
+font-size: 1.1em;
+line-height: 1.8;
+margin-bottom: 20px;
+text-align: justify;
+}
+
+.about-section ul {
+color: var(--text-dark);
+font-size: 1.1em;
+line-height: 2;
+margin-left: 30px;
+margin-top: 20px;
+}
+
+.about-section li {
+margin-bottom: 10px;
+}
+
+.about-section li::marker {
+color: var(--cyan);
+}
+
+@media (max-width: 768px) {
+nav ul {
+flex-direction: column;
+gap: 8px;
+align-items: stretch;
+}
+
+nav ul li a {
+text-align: center;
+}
+
+h1 {
+font-size: 2.2em;
+}
+
+.content-box {
+font-size: 1em;
+padding: 25px;
+}
+
+.about-section {
+padding: 25px;
+}
+
+.about-section h2 {
+font-size: 1.5em;
+}
+}
+</style>
+</head>
+<body>
+ <nav>
+ <ul>
+ <li><a href="Main.html">Main</a></li>
+ <li><a href="Homepage.html">Home</a></li>
+ <li><a href="Aboutus.html" class="active">About</a></li>
+ <li><a href="Contactus.html">Contact</a></li>
+ </ul>
+ </nav>
+ <div class="container">
+ <h1>Welcome to About Us</h1>
+ <div class="content-box">
+ <p>This is a simple HTML page for practicing Git branching and merging.</p>
+ </div>
+ <div class="about-section">
+ <h2>About This Project</h2>
+ <p>This project demonstrates the fundamentals of Git version control, including branch creation, file management, and merging workflows. Each page was developed on a separate branch to showcase collaborative development practices.</p>
+ <p>Key features of this project include:</p>
+ <ul>
+ <li>Git branching and merging strategies</li>
+ <li>Version control best practices</li>
+ <li>HTML structure and responsive design</li>
+ <li>Consistent styling across multiple pages</li>
+ </ul>
+ </div>
+ </div>
+</body>
+</html>
