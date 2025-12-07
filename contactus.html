@@ -5,126 +5,312 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>My Sample Contact Us page</title>
  <style>
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
- 
- body {
- margin: 0;
- font-family: 'Inter', sans-serif;
- background: linear-gradient(135deg, #001f3f 0%, #0074d9 50%, #001f3f 100%);
- color: #333;
- min-height: 100vh;
- }
- 
- nav {
- background-color: rgba(0, 31, 63, 0.95);
- backdrop-filter: blur(5px);
- padding: 15px 0;
- box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
- position: sticky;
- top: 0;
- z-index: 100;
- }
- 
- nav ul {
- list-style: none;
- display: flex;
- justify-content: center;
- gap: 30px;
- margin: 0;
- padding: 0;
- }
- 
- nav ul li a {
- color: #ffffff;
- text-decoration: none;
- font-weight: 600;
- font-size: 16px;
- padding: 10px 20px;
- border-radius: 25px;
- transition: all 0.3s ease;
- }
- 
- nav ul li a:hover {
- background-color: #0074d9;
- transform: translateY(-1px);
- box-shadow: 0 3px 10px rgba(0, 116, 217, 0.3);
- }
- 
- .container {
- max-width: 1200px;
- margin: 0 auto;
- padding: 80px 20px;
- text-align: center;
- opacity: 0;
- animation: fadeInUp 1s ease-out 0.5s forwards;
- }
- 
- @keyframes fadeInUp {
- from {
- opacity: 0;
- transform: translateY(20px);
- }
- to {
- opacity: 1;
- transform: translateY(0);
- }
- }
- 
- h1 {
- color: #ffffff;
- font-size: 3em;
- font-weight: 700;
- margin-bottom: 20px;
- text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
- background: linear-gradient(45deg, #ffffff, #7fdbff);
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
- background-clip: text;
- }
- 
- p {
- font-size: 1.3em;
- line-height: 1.7;
- color: rgba(255, 255, 255, 0.9);
- max-width: 800px;
- margin: 0 auto 40px;
- background: rgba(255, 255, 255, 0.05);
- padding: 20px;
- border-radius: 15px;
- backdrop-filter: blur(3px);
- border: 1px solid rgba(255, 255, 255, 0.1);
- transition: transform 0.3s ease;
- }
- 
- p:hover {
- transform: scale(1.01);
- }
- 
- @media (max-width: 768px) {
- nav ul {
- flex-direction: column;
- gap: 10px;
- }
- h1 {
- font-size: 2em;
- }
- p {
- font-size: 1.1em;
- }
- }
- </style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+ --navy: #01143D;
+ --bg: #E8ECEF;
+ --card: #FFFFFF;
+ --text-dark: #1E2A39;
+ --text-muted: #A9AEB4;
+ --progress: #4AB3FF;
+ --progress-bg: #D7DDE4;
+ --dark: #1B2B42;
+ --cyan: #43B3EF;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: 'Inter', sans-serif;
+background: var(--navy);
+color: var(--text-dark);
+min-height: 100vh;
+}
+
+nav {
+background-color: var(--dark);
+padding: 15px 0;
+position: sticky;
+top: 0;
+z-index: 1000;
+border-bottom: 2px solid var(--cyan);
+}
+
+nav ul {
+list-style: none;
+display: flex;
+justify-content: center;
+gap: 10px;
+margin: 0;
+padding: 0 20px;
+flex-wrap: wrap;
+}
+
+nav ul li a {
+color: var(--card);
+text-decoration: none;
+font-weight: 600;
+font-size: 16px;
+padding: 12px 24px;
+border-radius: 30px;
+transition: all 0.3s ease;
+display: inline-block;
+}
+
+nav ul li a:hover {
+background-color: rgba(67, 179, 239, 0.2);
+color: var(--cyan);
+}
+
+nav ul li a.active {
+background-color: var(--cyan);
+color: var(--navy);
+font-weight: 700;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 100px 20px;
+text-align: center;
+}
+
+h1 {
+color: var(--card);
+font-size: 3em;
+font-weight: 700;
+margin-bottom: 30px;
+}
+
+.content-box {
+font-size: 1.2em;
+line-height: 1.8;
+color: var(--text-dark);
+max-width: 800px;
+margin: 0 auto 40px;
+background: var(--card);
+padding: 40px;
+border-radius: 20px;
+border: 2px solid var(--cyan);
+transition: all 0.3s ease;
+}
+
+.content-box:hover {
+border-color: var(--progress);
+}
+
+.content-box p {
+color: var(--text-dark);
+margin: 0;
+}
+
+.contact-form {
+max-width: 600px;
+margin: 40px auto;
+background: var(--card);
+padding: 40px;
+border-radius: 20px;
+border: 2px solid var(--progress-bg);
+text-align: left;
+transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+border-color: var(--cyan);
+}
+
+.form-group {
+margin-bottom: 25px;
+}
+
+.form-group label {
+display: block;
+color: var(--cyan);
+font-weight: 600;
+margin-bottom: 8px;
+font-size: 1em;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 12px 16px;
+border: 2px solid var(--progress-bg);
+border-radius: 10px;
+background: var(--bg);
+color: var(--text-dark);
+font-family: 'Inter', sans-serif;
+font-size: 1em;
+transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: var(--cyan);
+background: var(--card);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+color: var(--text-muted);
+}
+
+.form-group textarea {
+min-height: 120px;
+resize: vertical;
+}
+
+.submit-btn {
+width: 100%;
+padding: 14px;
+background: var(--cyan);
+color: var(--navy);
+border: none;
+border-radius: 10px;
+font-size: 1.1em;
+font-weight: 700;
+cursor: pointer;
+transition: all 0.3s ease;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+background: var(--progress);
+transform: translateY(-2px);
+}
+
+.submit-btn:active {
+transform: translateY(0);
+}
+
+.contact-info {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
+margin-top: 40px;
+}
+
+.info-card {
+background: var(--card);
+padding: 25px;
+border-radius: 15px;
+border: 2px solid var(--progress-bg);
+transition: all 0.3s ease;
+}
+
+.info-card:hover {
+border-color: var(--cyan);
+transform: translateY(-3px);
+}
+
+.info-card h3 {
+color: var(--cyan);
+font-size: 1.3em;
+margin-bottom: 10px;
+font-weight: 700;
+}
+
+.info-card p {
+color: var(--text-dark);
+font-size: 1em;
+margin: 0;
+line-height: 1.6;
+}
+
+.email-list {
+margin-top: 10px;
+}
+
+.email-list p {
+margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+nav ul {
+flex-direction: column;
+gap: 8px;
+align-items: stretch;
+}
+
+nav ul li a {
+text-align: center;
+}
+
+h1 {
+font-size: 2.2em;
+}
+
+.content-box {
+font-size: 1em;
+padding: 25px;
+}
+
+.contact-form {
+padding: 25px;
+}
+
+.contact-info {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
 <body>
  <nav>
  <ul>
- <li><a href="Dashboard.html">Home</a></li>
- <li><a href="aboutus.html">About</a></li>
- <li><a href="contactus.html">Contact</a></li>
+ <li><a href="Main.html">Main</a></li>
+ <li><a href="Homepage.html">Home</a></li>
+ <li><a href="Aboutus.html">About</a></li>
+ <li><a href="Contactus.html" class="active">Contact</a></li>
  </ul>
  </nav>
  <div class="container">
  <h1>Welcome to Contact Us</h1>
- <p>This is a simple HTML page for practicing Git branching and merging.</p>
+ <div class="content-box">
+ <p>This is a simple HTML page for practicing Git branching and merging. Feel free to reach out if you have any questions!</p>
+ </div>
+ <div class="contact-form">
+ <form>
+ <div class="form-group">
+ <label for="name">Name</label>
+ <input type="text" id="name" name="name" placeholder="Enter your name" required>
+ </div>
+ <div class="form-group">
+ <label for="email">Email</label>
+ <input type="email" id="email" name="email" placeholder="Enter your email" required>
+ </div>
+ <div class="form-group">
+ <label for="message">Message</label>
+ <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+ </div>
+ <button type="submit" class="submit-btn">Send Message</button>
+ </form>
+ </div>
+ <div class="contact-info">
+ <div class="info-card">
+ <h3>Email</h3>
+ <div class="email-list">
+ <p>macalisangchristina@gmail.com</p>
+ <p>justineshenecariman@gmail.com</p>
+ </div>
+ </div>
+ <div class="info-card">
+ <h3>Phone</h3>
+ <p>09876543212</p>
+ </div>
+ <div class="info-card">
+ <h3>Location</h3>
+ <p>Argao, Cebu</p>
+ </div>
+ </div>
  </div>
 </body>
 </html>

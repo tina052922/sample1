@@ -3,7 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>My Sample About page</title>
+ <title>Main Page</title>
  <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
@@ -93,16 +93,11 @@ font-size: 1.2em;
 line-height: 1.8;
 color: var(--text-dark);
 max-width: 800px;
-margin: 0 auto 40px;
+margin: 40px auto;
 background: var(--card);
 padding: 40px;
 border-radius: 20px;
 border: 2px solid var(--cyan);
-transition: all 0.3s ease;
-}
-
-.content-box:hover {
-border-color: var(--progress);
 }
 
 .content-box p {
@@ -110,51 +105,21 @@ color: var(--text-dark);
 margin: 0;
 }
 
-.about-section {
-text-align: left;
-max-width: 900px;
-margin: 40px auto;
-background: var(--card);
-padding: 35px;
-border-radius: 15px;
-border: 2px solid var(--progress-bg);
+.btn-link {
+display: inline-block;
+margin-top: 30px;
+padding: 14px 30px;
+background: var(--cyan);
+color: var(--navy);
+text-decoration: none;
+border-radius: 10px;
+font-weight: 600;
 transition: all 0.3s ease;
 }
 
-.about-section:hover {
-border-color: var(--cyan);
-}
-
-.about-section h2 {
-color: var(--cyan);
-font-size: 2em;
-margin-bottom: 20px;
-text-align: center;
-font-weight: 700;
-}
-
-.about-section p {
-color: var(--text-dark);
-font-size: 1.1em;
-line-height: 1.8;
-margin-bottom: 20px;
-text-align: justify;
-}
-
-.about-section ul {
-color: var(--text-dark);
-font-size: 1.1em;
-line-height: 2;
-margin-left: 30px;
-margin-top: 20px;
-}
-
-.about-section li {
-margin-bottom: 10px;
-}
-
-.about-section li::marker {
-color: var(--cyan);
+.btn-link:hover {
+background: var(--progress);
+transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
@@ -169,20 +134,12 @@ text-align: center;
 }
 
 h1 {
-font-size: 2.2em;
+font-size: 2em;
 }
 
 .content-box {
 font-size: 1em;
 padding: 25px;
-}
-
-.about-section {
-padding: 25px;
-}
-
-.about-section h2 {
-font-size: 1.5em;
 }
 }
 </style>
@@ -190,28 +147,19 @@ font-size: 1.5em;
 <body>
  <nav>
  <ul>
- <li><a href="Main.html">Main</a></li>
+ <li><a href="Main.html" class="active">Main</a></li>
  <li><a href="Homepage.html">Home</a></li>
- <li><a href="Aboutus.html" class="active">About</a></li>
+ <li><a href="Aboutus.html">About</a></li>
  <li><a href="Contactus.html">Contact</a></li>
  </ul>
  </nav>
  <div class="container">
- <h1>Welcome to About Us</h1>
+ <h1>Welcome to Main Page</h1>
  <div class="content-box">
- <p>This is a simple HTML page for practicing Git branching and merging.</p>
- </div>
- <div class="about-section">
- <h2>About This Project</h2>
- <p>This project demonstrates the fundamentals of Git version control, including branch creation, file management, and merging workflows. Each page was developed on a separate branch to showcase collaborative development practices.</p>
- <p>Key features of this project include:</p>
- <ul>
- <li>Git branching and merging strategies</li>
- <li>Version control best practices</li>
- <li>HTML structure and responsive design</li>
- <li>Consistent styling across multiple pages</li>
- </ul>
+ <p>This is the main landing page for practicing Git branching and merging. Navigate to other pages to see the complete project.</p>
+ <a href="Homepage.html" class="btn-link">Go to Homepage</a>
  </div>
  </div>
 </body>
 </html>
+
